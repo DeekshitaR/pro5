@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Selected Students</title>
+    </head>
+    <body>
+        <h1>Selected Students</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>USN</th>
+                    <th>Semester</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in student_list %}
+                    <tr>
+                        <td>{{ student.student_name }}</td>
+                        <td>{{ student.student_usn }}</td>
+                        <td>{{ student.student_sem }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
